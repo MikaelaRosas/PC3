@@ -77,3 +77,10 @@ print(contenido1)
    driver = webdriver.Chrome('C:/Users/JUAN CARLOS DIAZ/Desktop/Pc3_Lp II/chromedriver.exe')
    driver.get('https://www.gob.pe/institucion/presidencia/noticias/588503-presidente-castillo-en-lambayeque-este-es-el-gobierno-y-el-quinquenio-de-la-educacion')
  <p>
+   
+ <p>
+  # Hemos sacado el link de las imagenes 
+images= driver.find_elements_by_tag_name('img')
+images = [image.get_attribute('src') for image in images]
+images     
+ <p>  
