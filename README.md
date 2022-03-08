@@ -72,3 +72,8 @@ contenido1 =sopa_articulo.find_all("h2")
 print(len(contenido)) 
 print(contenido1)
   <p>
+
+ <p>
+   driver = webdriver.Chrome('C:/Users/JUAN CARLOS DIAZ/Desktop/Pc3_Lp II/chromedriver.exe')
+   driver.get('https://www.gob.pe/institucion/presidencia/noticias/588503-presidente-castillo-en-lambayeque-este-es-el-gobierno-y-el-quinquenio-de-la-educacion')
+ <p>
