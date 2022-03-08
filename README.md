@@ -61,3 +61,14 @@ titulo = contenido
 print(len(contenido)) # todo junto 
 contenido[0].text
 <p>
+< pag> 
+  requests.get(TODOS_los_links[4])
+sopa_articulo = BeautifulSoup(respuesta_articulo.text)
+contenido =sopa_articulo.find_all("div",{"col-md-8 page"}) 
+# "col-md-8 page" selecciona todo el espacio donde se escribe
+# "col-md-12" 
+print(contenido[0].text) # todo el texto con titulo
+contenido1 =sopa_articulo.find_all("h2") 
+print(len(contenido)) 
+print(contenido1)
+  <p>
