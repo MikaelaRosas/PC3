@@ -15,3 +15,5 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 import time
 import os
+
+respuesta = requests.get(url_base + str(pagina))
