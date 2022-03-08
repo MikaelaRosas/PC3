@@ -52,3 +52,12 @@ for pg in range(10):
 respuesta_articulo
 TODOS_los_links[4]
 </p>
+< pag>
+#Obteniendo titulo, subtitulos y fecha de la noticia
+requests.get(TODOS_los_links[4])
+sopa_articulo = BeautifulSoup(respuesta_articulo.text)
+contenido =sopa_articulo.find_all("div",{"class":"institution-document"}) 
+titulo = contenido
+print(len(contenido)) # todo junto 
+contenido[0].text
+<p>
