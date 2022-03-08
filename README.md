@@ -24,3 +24,31 @@ url_base = "https://www.gob.pe/institucion/presidencia/noticias?filter%5Bterms%5
 respuesta = requests.get(url_base + str(pagina))
 <p>
 from bs4 import BeautifulSoup
+</p>
+ <p>
+ def obtiene_links(page):
+    response = requests.get(url_base + str(page))
+    sopa = BeautifulSoup(response.text)
+    anchors = []
+    if sopa is not None: #si la lista no es vacia
+        anchors = sopa.find_all("a",{"class":"text-primary track-ga-click card__mock hover:no-underline"})
+                                       #class="card border relative bg-white flex shadow-cards min-h-350px h-full flex-col"
+    hrefs = ["https://www.gob.pe" + a["href"] for a in anchors]
+    return hrefs
+</p>
+
+<p>
+ obtiene_links(1) # links de la pagina 1, en total 19
+</p>
+
+<p>
+  TODOS_los_links = []
+for pg in range(10):
+    TODOS_los_links.extend(obtiene_links(pg))
+</p>
+
+<p>
+  respuesta_articulo = requests.get(TODOS_los_links[0])
+respuesta_articulo
+TODOS_los_links[4]
+</p>
